@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2 id="inputs">CONTACT REXUSPRIMEONE</h2>
+<h4>For more info about Development fill this Form and send it to us</h4>
+<div class="example">
+    <form data-role="validator" action="javascript:">
+        <input type="text" data-role="input" data-prepend="Your name" placeholder="Input your name..." data-validate="minlength=6"><p>
+        <span class="invalid_feedback">This is invalid feedback</span>
+        <input type="text" data-role="input" data-prepend="Your mail" placeholder="Input your mail..." data-validate="minlength=6"><p>
+        <span class="invalid_feedback">This is invalid feedback</span>
+        <textarea data-role="textarea" class="mt-2"></textarea><p>
+                <div class="mt-2">
+                        
+                        <input type="reset" value="Reset" class="button">
+                        <input type="submit" value="Submit" class="button">
+                    </div>
+        </form>
+        </div><p>
+                <p>
+                        <p>
+                                <p>{% endblock %}

@@ -1,0 +1,68 @@
+{% load static %}
+<head>
+<link rel="stylesheet" href="{% static '/css/metro.min.css' %}">
+<link rel="stylesheet" href="{% static '/css/metro.all.css' %}">
+<link rel="stylesheet" href="{% static '/css/metro-colors.min.css' %}">
+<link rel="stylesheet" href="{% static '/css/metro-rtl.min.css' %}">
+<link rel="stylesheet" href="{% static '/css/metro-icons.min.css' %}">
+<link rel="stylesheet" href="{% static '/css/schemes/red-dark.css' %}">
+<link rel="stylesheet" href="{% static '/css/schemes/red-dark.min.css' %}">
+</head>
+<div class="example">
+        <h6 class="text-light"></h6>
+        <ul class="h-menu">
+            <li><a href="{% url "home" %}">FRONT</a></li>
+            <li><a href="{% url "gundam_list" %}">GUNDAM</a></li>
+            <li><a href="{% url "pilot_list" %}">PILOT</a></li>
+            <li><a href="{% url "weapon_list" %}">WEAPON</a></li>
+            <li><a href="{% url "utils_list" %}">UTILITY</a></li>
+            <li><a href="{% url "contact" %}">CONTACT</a></li>
+        </ul>
+
+{% block content %}
+{% endblock %}
+<footer>
+<script src="{% static '/jquery-3.3.1.min.js' %}"></script>
+<script src="{% static '/clipboard.min.js' %}"></script>
+<script src="{% static '/js/particles.min.js' %}"></script>
+<script src="{% static '/js/metro.min.js' %}"></script>
+<script src="{% static '/js/metro.js' %}"></script>
+<script src="{% static '/js/holder.js' %}"></script>
+<script src="{% static '/js/holder.min.js' %}"></script>
+<script src = "{% static '/js/parallax.js' %}"></script>
+ <script>
+        $("input[name=r3]").on("click", function(){
+            var checked = $(this).is(":checked");
+            if (checked) {
+                $("#listview-1").data("listview").view(this.value);
+            }
+        });
+    </script>
+    <h2 id="table">NAVIGATION</h2>
+    <div class="example">
+        <table class="table cell-border table-border striped">
+            <thead>
+            <tr>
+                <th>GUNDAM</th>
+                <th>PILOT</th>
+                <th class="sortable-column sort-asc">WEAPON</th>
+                <th>UTILS</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr><td><a href = "{% url "gundam_list" %}">GUNDAM LIST</a></td><td><a href = "{% url "pilot_list" %}">PILOT LIST</a></td><td><a href = "{% url "weapon_list" %}">WEAPON LIST</a></td><td><a href = "{% url "utils_list" %}">UTILS LIST</a></td></tr>
+            </tbody>
+        </table>
+    </div>
+    <div powered = "center">
+            <table class="table cell-border table-border striped">
+                <thead>
+                    <tr>
+        <th>powered by REXUSPRIMEONE/
+        PRIMAL STUDIO/THUNDERJET/THE JOKERZONE | <p>GUNDANIUM THEMES</th>
+            
+    </tr>
+    </thead>    
+    </table>
+    </div>
+</footer>

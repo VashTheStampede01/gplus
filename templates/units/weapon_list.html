@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+ <h2 id="table">WEAPON LIST</h2>
+        <div class="example">
+            <table class="table cell-border table-border striped">
+                <thead>
+                <tr>
+                    <th>IMAGE</th>
+                    <th>NAME</th>
+                    <th class="sortable-column sort-asc">CODE</th>
+                    <th>TYPE</th>
+                </tr>
+                </thead>
+                {% for weapon in object_list %}
+                <tbody>
+                <tr><td><img src = "{{weapon.weapon_image.url}}" height = "50" width = "50"></a></td><td><a href = "{% url "weapon_detail" weapon.id %}">{{weapon.weapon_name}}</td><td>{{weapon.weapon_code}}</td><td>{{weapon.utils_type}}</td></tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+ <h2 id="table">UTILS</h2>
+        <div class="example">
+            <table class="table cell-border table-border striped">
+                <thead>
+                <tr>
+                    
+                    <th>NAME</th>
+                    <th class="sortable-column sort-asc">CODE</th>
+                    <th>TYPE</th>
+                </tr>
+                </thead>
+                {% for utils in object_list %}
+                <tbody>
+                <tr><td><a href = "{% url "utils_detail" utils.id %}">{{utils.utils_name}}</a></td><td>{{utils.utils_utils_code}}</td><td>{{utils.type}}</td></tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+{% endblock %}

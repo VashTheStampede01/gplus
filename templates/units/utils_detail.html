@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+        {% block content %}
+          <img src = "{{object.image.url}}" height = "500" width = "1550"><p>
+          <h2><button class="button alert outline large">{{object.utils_name}}</button></h2>
+          <body>
+              
+            
+                <h2 id="table">WEAPON INFO</h2>
+                <div class="example">
+                    <table class="table cell-border table-border striped">
+                        <thead>
+                        <tr>
+                            <th class="sortable-column sort-asc">type</th>
+                            <th class="sortable-column sort-asc">CODE</th>
+                            
+                            
+                            
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr><td>{{object.type}}</td>
+                            <td>{{object.code}}</td>
+                            
+                            
+                        </tr>
+                        
+                        </tbody>
+                    </table>
+                </div>
+                <h2 id="table">DESCRIPTTIONS</h2>
+                <div class="example">
+                    <table class="table cell-border table-border striped">
+                        <thead>
+                        <tr>
+                            <th class="sortable-column sort-asc">DESCRIPTIONS</th>
+                            
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr><td>{{object.descriptions}}</td>
+                            
+                        </tr>
+                        
+                        </tbody>
+                    </table>
+                </div>
+                </body>
+
+                
+        
+        {% endblock %}

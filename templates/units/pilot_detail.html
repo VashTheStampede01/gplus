@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block content %}
+  <img src = "{{object.image.url}}" height = "500" width = "1550"><p>
+  <h2><button class="button alert outline large">{{object.name}}</button></h2>
+  <body>
+      
+    
+        <h2 id="table">PILOT INFO</h2>
+        <div class="example">
+            <table class="table cell-border table-border striped">
+                <thead>
+                <tr>
+                    <th>CODE</th>
+                    <th>GENDER</th>
+                    <th class="sortable-column sort-asc">NATIONALITY</th>
+                    <th>FRACTIONS</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr><td>{{object.code}}</td><td>{{object.gender}}</td><td>{{object.nationality}}</td><td>{{object.fractions}}</td></tr>
+                
+                </tbody>
+            </table>
+        </div>
+
+        <h2 id="table">ANOTHER INFO</h2>
+        <div class="example">
+            <table class="table cell-border table-border striped">
+                <thead>
+                <tr>
+                    <th>BIO</th>
+                    
+                </tr>
+                </thead>
+                <tbody>
+                <tr><td>{{object.bio}}</td></tr>
+                
+                </tbody>
+            </table>
+        </div>
+
+              </body>
+
+{% endblock %}

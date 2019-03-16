@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+ <h2 id="table">GUNDAM LIST</h2>
+        <div class="example">
+            <table class="table cell-border table-border striped">
+                <thead>
+                <tr>
+                    
+                    <th>IMAGE</th>
+                    <th>NAME</th>
+                    <th class="sortable-column sort-asc">CODE</th>
+                    <th>TYPE</th>
+                </tr>
+                </thead>
+                {% for gundam in object_list %}
+                <tbody>
+                <tr>
+                    <td><img src = "{{gundam.image.url}}" height = "50" width = "50"></a></td>
+                    <td><a href = "{% url "gundam_detail" gundam.id %}">{{gundam.name}}</a></td>
+                    <td>{{gundam.code}}</td>
+                    <td>{{gundam.type}}</td></tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+{% endblock %}

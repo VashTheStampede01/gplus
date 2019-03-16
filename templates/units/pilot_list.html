@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+ <h2 id="table">PILOT</h2>
+        <div class="example">
+            <table class="table cell-border table-border striped">
+                <thead>
+                <tr>
+                    <th>IMAGE</th>
+                    <th>NAME</th>
+                    <th class="sortable-column sort-asc">GENDER</th>
+                    <th>FRACTIONS</th>
+                </tr>
+                </thead>
+                {% for pilot in object_list %}
+                <tbody>
+                <tr><td><img src = "{{pilot.image.url}}" height = "50" width = "50"></a></td><td><a href = "{% url "pilot_detail" pilot.id %}">{{pilot.name}}</a></td><td>{{pilot.gender}}</td><td>{{pilot.fractions}}</td></tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+{% endblock %}
